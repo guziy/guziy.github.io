@@ -22,3 +22,7 @@ table.logo{
 .logo img{
     height: 40px;
 }
+
+.reveal{
+	font-size: 150%;
+}
