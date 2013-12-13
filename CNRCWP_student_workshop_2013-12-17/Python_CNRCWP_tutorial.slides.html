@@ -1728,8 +1728,6 @@ text-align: inherit;
 
 </head>
 
-
-
 <body>
 <div class="reveal">
 <div class="slides">
@@ -1878,7 +1876,7 @@ In&nbsp;[3]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[6]:
+In&nbsp;[25]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;Sasha&quot;</span><span class="p">):</span>
@@ -1903,16 +1901,18 @@ In&nbsp;[6]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[4]:
+In&nbsp;[23]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 
 <span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="n">population</span> <span class="o">=</span> <span class="mi">0</span> <span class="c">#Example of a static class variable</span>
+    <span class="c">#Example of a static class variable</span>
+    <span class="n">population</span> <span class="o">=</span> <span class="mi">0</span> 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;Sasha&quot;</span><span class="p">):</span>
         <span class="n">Person</span><span class="o">.</span><span class="n">population</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">birthdate</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="c">#instance field, property</span>
+        <span class="c">#instance field, property</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">birthdate</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> 
         
     <span class="k">def</span> <span class="nf">my_moto</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="s">&quot;Go go {0}!!!&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> 
@@ -1931,17 +1931,20 @@ In&nbsp;[4]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[5]:
+In&nbsp;[27]:
 </div>
 <div class="input_area box-flex1">
-<div class="highlight"><pre><span class="n">f</span><span class="p">(</span><span class="s">&quot;anything&quot;</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;Oleks&quot;</span><span class="p">)</span> <span class="c">#Calling the function f</span>
+<div class="highlight"><pre><span class="c">#Calling the function f</span>
+<span class="n">f</span><span class="p">(</span><span class="s">&quot;anything&quot;</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;Oleks&quot;</span><span class="p">)</span> 
 
-<span class="n">p1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span> <span class="c">#Creating an object of class Person</span>
+<span class="c">#Creating an object of class Person</span>
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span> 
 
 <span class="c">##Create some more person objects</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
     <span class="n">p</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
-    
+
+<span class="kn">import</span> <span class="nn">time</span>    
 <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c">#wait for 5 seconds</span>
 <span class="k">print</span> <span class="s">&quot;{0} persons were born just now. &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">population</span><span class="p">)</span>
 <span class="k">print</span> <span class="s">&quot;And now the first person is {0} old ..&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">get_my_age</span><span class="p">())</span>
@@ -1958,8 +1961,8 @@ In&nbsp;[5]:
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
 Hello Oleks !!!
-11 persons were born just now. 
-And now the first person is 0:00:05.000761 old ..
+22 persons were born just now. 
+And now the first person is 0:00:05.002199 old ..
 
 </pre>
 </div>
@@ -2019,7 +2022,7 @@ And now the first person is 0:00:05.000761 old ..
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[6]:
+In&nbsp;[21]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="c">#lists (you can conactenate and sort in place)</span>
@@ -2027,7 +2030,7 @@ In&nbsp;[6]:
 <span class="n">z</span> <span class="o">=</span> <span class="n">the_list</span> <span class="o">+</span> <span class="n">y</span>
 <span class="k">print</span> <span class="n">z</span>
 <span class="c">#Test if a number is inside a list</span>
-<span class="k">print</span> <span class="mi">19</span> <span class="ow">in</span> <span class="n">z</span><span class="p">,</span> <span class="mi">5</span> <span class="ow">in</span> <span class="n">z</span><span class="p">,</span> <span class="mi">6</span> <span class="ow">in</span> <span class="n">x</span> <span class="ow">and</span> <span class="mi">6</span> <span class="ow">in</span> <span class="n">y</span> 
+<span class="k">print</span> <span class="mi">19</span> <span class="ow">in</span> <span class="n">z</span><span class="p">,</span> <span class="mi">5</span> <span class="ow">in</span> <span class="n">z</span><span class="p">,</span> <span class="mi">6</span> <span class="ow">in</span> <span class="n">the_list</span> <span class="ow">and</span> <span class="mi">6</span> <span class="ow">in</span> <span class="n">y</span> 
 </pre></div>
 
 </div>
@@ -2040,7 +2043,7 @@ In&nbsp;[6]:
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
-[1, 2, 3, 4, 5, 6, 6, 6, 6, 6]
+ [1, 2, 3, 4, 5, 6, 6, 6, 6, 6]
 False True False
 
 </pre>
@@ -2060,11 +2063,12 @@ False True False
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[7]:
+In&nbsp;[28]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="c">#square eleaments of a list</span>
-<span class="k">print</span> <span class="p">[</span><span class="n">the_el</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">the_el</span> <span class="ow">in</span> <span class="n">the_list</span><span class="p">]</span> <span class="c">#list comprehension</span>
+<span class="c">#list comprehension</span>
+<span class="k">print</span> <span class="p">[</span><span class="n">the_el</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">the_el</span> <span class="ow">in</span> <span class="n">the_list</span><span class="p">]</span> 
 </pre></div>
 
 </div>
@@ -2179,21 +2183,22 @@ In&nbsp;[10]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[11]:
+In&nbsp;[29]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="c">#dictionary</span>
 <span class="n">author_to_books</span> <span class="o">=</span> <span class="p">{</span> 
-    <span class="s">&quot;Stephen King&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s">&quot;Carrie&quot;</span><span class="p">,</span> 
-                     <span class="s">&quot;On writing&quot;</span><span class="p">,</span> 
-                     <span class="s">&quot;Green Mile&quot;</span><span class="p">],</span>
-                   
-    <span class="s">&quot;Richard Feynman&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s">&quot;Lectures on computation&quot;</span><span class="p">,</span> 
-                        <span class="s">&quot;The pleasure of finding things out&quot;</span><span class="p">]</span>
+
+<span class="s">&quot;Stephen King&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s">&quot;Carrie&quot;</span><span class="p">,</span> 
+                 <span class="s">&quot;On writing&quot;</span><span class="p">,</span> 
+                 <span class="s">&quot;Green Mile&quot;</span><span class="p">],</span>
+
+<span class="s">&quot;Richard Feynman&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s">&quot;Lectures on computation&quot;</span><span class="p">,</span> 
+                    <span class="s">&quot;The pleasure of finding things out&quot;</span><span class="p">]</span>
 <span class="p">}</span>
 <span class="c">#add elements to a dictionary</span>
 <span class="n">author_to_books</span><span class="p">[</span><span class="s">&quot;Andrey Kolmogorov&quot;</span><span class="p">]</span> <span class="o">=</span> \
-                    <span class="p">[</span> <span class="s">&quot;Foundations Of The Theory Of Prob... &quot;</span><span class="p">]</span>
+                <span class="p">[</span><span class="s">&quot;Foundations Of The Theory Of Prob...&quot;</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -2409,12 +2414,12 @@ True False False
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[17]:
+In&nbsp;[18]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">s</span> <span class="o">=</span> <span class="s">&quot;mama&quot;</span>
 <span class="c">#reverse (also works for lists)</span>
-<span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">print</span> <span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -2424,15 +2429,12 @@ In&nbsp;[17]:
 <div class="output vbox">
 
 
-<div class="hbox output_area"><div class="prompt output_prompt">
-    Out[17]:</div>
-<div class="box-flex1 output_subarea output_pyout">
-
-
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
-&apos;amam&apos;
-</pre>
+amam
 
+</pre>
 </div>
 </div>
 
@@ -2444,11 +2446,12 @@ In&nbsp;[17]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[18]:
+In&nbsp;[17]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="c">#Dynamically changing parts of a string</span>
-<span class="s">&quot;My name is {0}. I am doing my {1}. I am {2} old. Weight is {3:.3f} kg&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s">&quot;Black&quot;</span><span class="p">,</span> <span class="s">&quot;PhD&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mf">80.7823</span><span class="p">)</span>
+<span class="n">tpl</span> <span class="o">=</span> <span class="s">&quot;My name is {0}. I am doing my {1}. I am {2} old. Weight is {3:.3f} kg&quot;</span>
+<span class="k">print</span> <span class="n">tpl</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s">&quot;Black&quot;</span><span class="p">,</span> <span class="s">&quot;PhD&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mf">80.7823</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -2458,15 +2461,12 @@ In&nbsp;[18]:
 <div class="output vbox">
 
 
-<div class="hbox output_area"><div class="prompt output_prompt">
-    Out[18]:</div>
-<div class="box-flex1 output_subarea output_pyout">
-
-
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
-&apos;My name is Black. I am doing my PhD. I am 25 old. Weight is 80.782 kg&apos;
-</pre>
+My name is Black. I am doing my PhD. I am 25 old. Weight is 80.782 kg
 
+</pre>
 </div>
 </div>
 
@@ -2520,7 +2520,7 @@ In&nbsp;[19]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[20]:
+In&nbsp;[12]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="c">#What time is it</span>
@@ -2538,7 +2538,7 @@ In&nbsp;[20]:
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
-2013-12-12 20:58:14.942484
+2013-12-13 01:45:19.897022
 
 </pre>
 </div>
@@ -2552,7 +2552,7 @@ In&nbsp;[20]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[21]:
+In&nbsp;[13]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="c">#Can you give me hours and minutes, please</span>
@@ -2567,12 +2567,12 @@ In&nbsp;[21]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[21]:</div>
+    Out[13]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
 <pre>
-(&apos;20:58&apos;, &apos;20h58min&apos;)
+(&apos;01:45&apos;, &apos;01h45min&apos;)
 </pre>
 
 </div>
@@ -2590,14 +2590,15 @@ In&nbsp;[21]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[22]:
+In&nbsp;[16]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="c">#It is easy to generate a list of dates, with different intervals</span>
 <span class="n">dt</span> <span class="o">=</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span>
 <span class="n">end_date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
 <span class="n">date_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">end_date</span> <span class="o">-</span> <span class="n">i</span> <span class="o">*</span> <span class="n">dt</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">)];</span> <span class="n">date_list</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-<span class="k">print</span> <span class="s">&quot;generated dates between {0:%Y-%m-</span><span class="si">%d</span><span class="s"> %Hh} and {1:%Y-%m-</span><span class="si">%d</span><span class="s"> %Hh}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">date_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">date_list</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">template</span> <span class="o">=</span> <span class="s">&quot;generated dates between {0:%Y-%m-</span><span class="si">%d</span><span class="s"> %Hh} and {1:%Y-%m-</span><span class="si">%d</span><span class="s"> %Hh}&quot;</span>
+<span class="k">print</span> <span class="n">template</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">date_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">date_list</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -2610,7 +2611,7 @@ In&nbsp;[22]:
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
-generated dates between 2013-12-12 20h and 2013-12-06 19h
+generated dates between 2013-12-13 01h and 2013-12-07 00h
 
 </pre>
 </div>
@@ -16461,64 +16462,6 @@ window.onload = function () {
 Reveal.addEventListener( 'slidechanged', function( event ) {
 MathJax.Hub.Rerender(event.currentSlide);
 });
-</script>
-
-</body>
-
-
-<script>
-
-Reveal.initialize({
-
-    // Display controls in the bottom right corner
-    //controls: true,
-
-    // Display a presentation progress bar
-    //progress: true,
-
-    // Push each slide change to the browser history
-    //history: false,
-
-    // Enable keyboard shortcuts for navigation
-    //keyboard: true,
-
-    // Enable touch events for navigation
-    //touch: true,
-
-    // Enable the slide overview mode
-    //overview: true,
-
-    // Vertical centering of slides
-    //center: true,
-
-    // Loop the presentation
-    //loop: false,
-
-    // Change the presentation direction to be RTL
-    //rtl: false,
-
-    // Number of milliseconds between automatically proceeding to the
-    // next slide, disabled when set to 0, this value can be overwritten
-    // by using a data-autoslide attribute on your slides
-    //autoSlide: 0,
-
-    // Enable slide navigation via mouse wheel
-    //mouseWheel: false,
-
-    // Transition style
-    transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
-
-    // Transition speed
-    //transitionSpeed: 'default', // default/fast/slow
-
-    // Transition style for full page backgrounds
-    //backgroundTransition: 'default', // default/linear/none
-
-    // Theme
-    //theme: 'default' // available themes are in /css/theme
-
-});
-
 </script>
 
 </body>
