@@ -3489,16 +3489,25 @@ RU5ErkJggg==
 <h2 id="basemap-code-is-available-on-github.">Basemap code is available on <a href="https://github.com/matplotlib/basemap">github</a>.</h2>
 <h2 id="the-usual-workflow-with-the-library">The usual workflow with the library:</h2>
 <ul>
-<li><strong>Create a basemap object</strong></li>
-</ul>
-<pre class="sourceCode python"><code class="sourceCode python">basemap = Basemap(projection=<span class="st">&quot;...&quot;</span>, ...)</code></pre>
-<ul>
-<li><strong>Draw your field using:</strong></li>
-</ul>
-<pre class="sourceCode python"><code class="sourceCode python">basemap.contour(), basemap.contourf(), basemap.pcolormesh()</code></pre>
-<ul>
+<li><strong>Create a basemap object</strong>
+<pre class="co"> 
+basemap = Basemap(projection="...", ...)
+</pre>
+
+</li>
+<li><strong>Draw your field using:</strong>
+<pre class="co"> 
+basemap.contour(), basemap.contourf(), basemap.pcolormesh()
+</pre>
+</li>
 <li><p><strong>It provides utility functions to draw coastlines, meridians and shapefiles (only those that contain lat/lon coordinates), mask ocean points.</strong></p></li>
-<li><p><strong>Drawing the colorbar is as easy as:</strong> <code>python basemap.colorbar(img)</code></p></li>
+<li><strong>Drawing the colorbar is as easy as:</strong>
+<pre class="co"> 
+basemap.colorbar(img)
+</pre>
+
+
+</li>
 </ul>
 </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
