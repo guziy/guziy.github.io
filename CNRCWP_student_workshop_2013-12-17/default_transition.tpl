@@ -45,7 +45,7 @@ Reveal.initialize({
     //mouseWheel: false,
 
     // Transition style
-    transition: 'cube', // default/cube/page/concave/zoom/linear/fade/none
+    transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
 
     // Transition speed
     //transitionSpeed: 'default', // default/fast/slow
@@ -54,7 +54,7 @@ Reveal.initialize({
     //backgroundTransition: 'default', // default/linear/none
 
     // Theme
-    //theme: 'beige' // available themes are in /css/theme
+    //theme: 'default' // available themes are in /css/theme
 
 });
 
