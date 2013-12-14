@@ -60,5 +60,4 @@ Reveal.initialize({
 
 </script>
 
-</body>
 {% endblock body %}
