@@ -2034,12 +2034,6 @@ The age of the first is 0:00:05.005990
 <li><p>Modify the script making it print squares of odd numbers from 13 to 61 inclusively.</p></li>
 <li><p>What will this code print to console:</p></li>
 </ul>
-<pre class="sourceCode python"><code class="sourceCode python">    x = <span class="dv">1</span> <span class="co">#define a global variable</span>
-    <span class="kw">def</span> my_function(argument = x):
-        <span class="kw">print</span> argument ** <span class="dv">2</span>
-    <span class="co">#change the value of the global variable</span>
-    x = <span class="dv">5</span>
-    my_function() <span class="co">#call the function defined above</span></code></pre>
 <pre class="co">
     x = 1 #define a global variable
     def my_function(argument = x):
@@ -3008,7 +3002,7 @@ generated dates between:
 <li><p>Get list of all items in the folders from your <code>LD_LIBRARY_PATH</code> environment variable</p></li>
 <li><p>Write a function that finds all the numbers in a string using <code>re</code> module (Note: make sure real numbers are also accounted for. Optionally you can also account for the fractions like 2/3)</p></li>
 <li><p>Calculate your age in weeks using <code>timedelta</code></p></li>
-<li><p>Figure out on which day of week you were born</p></li>
+<li><p>Figure out on which day of week you were born (see the <code>calendar</code> module)</p></li>
 </ul>
 </div></section>
     </section><section>
@@ -3243,11 +3237,11 @@ array([0, 0, 1])
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[178]:
+In&nbsp;[221]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
-<span class="k">print</span> <span class="n">arr</span>
+<span class="k">print</span> <span class="n">arr</span><span class="o">.</span><span class="n">T</span>
 <span class="k">print</span> <span class="s">&quot;Sum of positive numbers: &quot;</span><span class="p">,</span> <span class="n">arr</span><span class="p">[</span><span class="n">arr</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 </pre></div>
 
@@ -3261,10 +3255,12 @@ In&nbsp;[178]:
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
-[[-1.07266828 -0.67669601  0.2768777   1.38969987 -0.35323539]
- [ 1.01254143 -1.37724403  1.37952198 -0.16746985 -0.48036167]
- [ 1.00639315 -1.89422771 -0.61774077 -0.39599776 -1.07611357]]
-Sum of positive numbers:  5.06503413101
+[[-0.2334891   0.19146391 -0.23240821]
+ [ 1.95069157  0.8014081  -0.98415544]
+ [-1.62409715  0.06812841 -1.00872318]
+ [ 0.09967167 -1.17633703  0.8412595 ]
+ [-0.1751062  -1.52149147  0.13773734]]
+Sum of positive numbers:  4.09036050964
 
 </pre>
 </div>
@@ -3277,19 +3273,23 @@ Sum of positive numbers:  5.06503413101
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="exercises-numpy">Exercises: Numpy</h1>
 <ul>
-<li>Generate a 10 x 3 array of random numbers (in range [0,1]). For each row, pick the number closest to 0.5 (<a href="http://scipy-lectures.github.io/intro/numpy/exercises.html#picture-manipulation-framing-lena">source</a>)</li>
+<li>Generate a 10 x 3 array of random numbers (in range [0,1]). For each row, pick the number closest to 0.5 (<a href="http://scipy-lectures.github.io/intro/numpy/exercises.html#picture-manipulation-framing-lena">source</a>) <em>Hint:</em> use <code>np.argmin</code>.</li>
 </ul>
 </div><div style=display:none>
     
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[179]:
+In&nbsp;[230]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">arr</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">)</span>
+
 <span class="k">print</span> <span class="n">arr</span>
+<span class="n">colinds</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">rowinds</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">arr</span><span class="p">[</span><span class="n">rowinds</span><span class="p">,</span> <span class="n">colinds</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -3302,18 +3302,31 @@ In&nbsp;[179]:
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
-[[-0.26501122  0.38228599  0.08787183]
- [-0.50203688  1.12137299  0.31131215]
- [ 1.09781802 -0.15922585 -0.481865  ]
- [ 1.1349811   0.17687765 -0.47235621]
- [-0.89575981  1.12236172 -1.0863735 ]
- [ 0.41831265 -0.13428378 -2.07934726]
- [ 0.47997556  1.00040126  0.8454695 ]
- [ 1.26132396 -1.40872642  0.4420846 ]
- [-1.63142494 -1.10892577  0.73395474]
- [-0.51344379 -0.37854794 -0.28469855]]
+[[-0.45830895  0.29540733  0.16835805]
+ [-1.47288741  2.06845819 -1.04686001]
+ [ 0.78943565  0.7026896  -0.15029981]
+ [-0.76453427 -1.53676978  0.06285128]
+ [ 0.87674287  0.13343768 -1.24999739]
+ [ 0.18102898 -0.01369639  0.60509127]
+ [-1.42382851 -0.67591499  0.94659627]
+ [-0.97211467 -1.57997556 -0.15318296]
+ [-0.14373063  0.53303992 -1.37108889]
+ [ 1.40303991 -0.53427284 -1.08025752]]
 
 </pre>
+</div>
+</div>
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[230]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+array([ 0.29540733, -1.04686001,  0.7026896 ,  0.06285128,  0.13343768,
+        0.60509127,  0.94659627, -0.15318296,  0.53303992,  1.40303991])
+</pre>
+
 </div>
 </div>
 
