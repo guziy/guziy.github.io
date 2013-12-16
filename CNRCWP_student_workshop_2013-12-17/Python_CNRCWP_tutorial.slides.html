@@ -2034,6 +2034,12 @@ The age of the first is 0:00:05.000480
 <li><p>Modify the script making it print squares of odd numbers from 13 to 61 inclusively.</p></li>
 <li><p>What will this code print to console:</p></li>
 </ul>
+<pre class="sourceCode python"><code class="sourceCode python">    x = <span class="dv">1</span> <span class="co">#define a global variable</span>
+    <span class="kw">def</span> my_function(argument = x):
+        <span class="kw">print</span> argument ** <span class="dv">2</span>
+    <span class="co">#change the value of the global variable</span>
+    x = <span class="dv">5</span>
+    my_function() <span class="co">#call the function defined above</span></code></pre>
 <pre class="co">
     x = 1 #define a global variable
     def my_function(argument = x):
@@ -2043,12 +2049,11 @@ The age of the first is 0:00:05.000480
     my_function() #call the function defined above
 </pre>
 
-</div><aside class="notes">
-    
+</div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[199]:
+In&nbsp;[12]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span> <span class="c">#define a global variable</span>
@@ -2078,8 +2083,7 @@ In&nbsp;[199]:
 </div>
 </div>
 
-</div>
-    </aside></section>
+</div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -2099,15 +2103,13 @@ In&nbsp;[199]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[200]:
+In&nbsp;[420]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="c">#lists (you can conactenate and sort in place)</span>
 <span class="n">the_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">];</span> <span class="n">other_list</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="p">[</span><span class="mi">6</span><span class="p">];</span>
 <span class="n">z</span> <span class="o">=</span> <span class="n">the_list</span> <span class="o">+</span> <span class="n">other_list</span>
 <span class="k">print</span> <span class="n">z</span>
-<span class="c">#Test if a number is inside a list</span>
-<span class="k">print</span> <span class="mi">19</span> <span class="ow">in</span> <span class="n">z</span><span class="p">,</span> <span class="mi">5</span> <span class="ow">in</span> <span class="n">z</span><span class="p">,</span> <span class="mi">6</span> <span class="ow">in</span> <span class="n">the_list</span> <span class="ow">and</span> <span class="mi">6</span> <span class="ow">in</span> <span class="n">other_list</span> 
 </pre></div>
 
 </div>
@@ -2121,6 +2123,35 @@ In&nbsp;[200]:
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
 [1, 2, 3, 4, 5, 6, 6, 6, 6, 6]
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[421]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="c">#Test if a number is inside a list</span>
+<span class="k">print</span> <span class="mi">19</span> <span class="ow">in</span> <span class="n">z</span><span class="p">,</span> <span class="mi">5</span> <span class="ow">in</span> <span class="n">z</span><span class="p">,</span> <span class="mi">6</span> <span class="ow">in</span> <span class="n">the_list</span> <span class="ow">and</span> <span class="mi">6</span> <span class="ow">in</span> <span class="n">other_list</span> 
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
 False True False
 
 </pre>
@@ -2537,7 +2568,7 @@ In&nbsp;[211]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[212]:
+In&nbsp;[4]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">os</span>
@@ -3002,7 +3033,7 @@ generated dates between:
 <li><p>Get list of all items in the folders from your <code>LD_LIBRARY_PATH</code> environment variable</p></li>
 <li><p>Write a function that finds all the numbers in a string using <code>re</code> module (Note: make sure real numbers are also accounted for. Optionally you can also account for the fractions like 2/3)</p></li>
 <li><p>Calculate your age in weeks using <code>timedelta</code></p></li>
-<li><p>Figure out on which day of week you were born (see the <code>calendar</code> module)</p></li>
+<li><p>Figure out on which day of week you were born (see the <code>calendar</code> module), you can have fun by determining on which day of week you'll have your birthday in 2014.</p></li>
 </ul>
 </div></section>
     </section><section>
@@ -8249,6 +8280,7 @@ IBAIKuT/AVgPmX9Kno5YAAAAAElFTkSuQmCC
 <h1 id="basemap">Basemap</h1>
 <h2 id="the-author-is-jeff-whitaker.">The author is Jeff Whitaker.</h2>
 <h2 id="basemap-code-is-available-on-github.">Basemap code is available on <a href="https://github.com/matplotlib/basemap">github</a>.</h2>
+<h2 id="example-gallery.">Example <a href="http://matplotlib.org/basemap/users/examples.html">gallery</a>.</h2>
 <p>PyNGL - can be used as an alternative.</p>
 </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -8283,7 +8315,7 @@ basemap.colorbar(img)
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[251]:
+In&nbsp;[2]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">from</span> <span class="nn">mpl_toolkits.basemap</span> <span class="kn">import</span> <span class="n">Basemap</span>
@@ -15489,7 +15521,116 @@ In&nbsp;[]:
 </div>
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="basemap-reading-and-visualizing-shape-files-download-data">Basemap: reading and visualizing shape files (Download data)</h1>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[6]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="c">#download the shape files directory</span>
+<span class="kn">from</span> <span class="nn">urllib2</span> <span class="kn">import</span> <span class="n">urlopen</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="n">local_folder</span> <span class="o">=</span> <span class="s">&quot;countries&quot;</span>
+<span class="n">remote_folder</span> <span class="o">=</span> <span class="s">&#39;http://scaweb.sca.uqam.ca/~huziy/example_data/countries/&#39;</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">local_folder</span><span class="p">):</span>
+    <span class="n">urlpath</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">remote_folder</span><span class="p">)</span>
+    <span class="n">string</span> <span class="o">=</span> <span class="n">urlpath</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">&#39;utf-8&#39;</span><span class="p">)</span>
+    <span class="n">pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s">r&#39;cntry00\....&quot;&#39;</span><span class="p">)</span>
+    <span class="n">filelist</span> <span class="o">=</span> <span class="n">pattern</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+    <span class="n">filelist</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">filelist</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">s</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s">&#39;zip&quot;&#39;</span><span class="p">)]</span>
+    
+    <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">local_folder</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">fname</span> <span class="ow">in</span> <span class="n">filelist</span><span class="p">:</span>
+        <span class="n">f_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">local_folder</span><span class="p">,</span> <span class="n">fname</span><span class="p">)</span>
+        <span class="n">remote_f_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">remote_folder</span><span class="p">,</span> <span class="n">fname</span><span class="p">)</span>
+        <span class="c">#download selected files</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">f_path</span><span class="p">,</span> <span class="s">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fobj</span><span class="p">:</span>
+            <span class="n">fobj</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">urlopen</span><span class="p">(</span><span class="n">remote_f_path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="basemap-reading-and-visualizing-shape-files">Basemap: reading and visualizing shape files</h1>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[10]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">bworld</span> <span class="o">=</span> <span class="n">Basemap</span><span class="p">()</span>
+<span class="n">shp_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">local_folder</span><span class="p">,</span> <span class="s">&quot;cntry00&quot;</span><span class="p">)</span>
+<span class="n">ncountries</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">linecollection</span> <span class="o">=</span> <span class="n">bworld</span><span class="o">.</span><span class="n">readshapefile</span><span class="p">(</span><span class="n">shp_file</span><span class="p">,</span> <span class="s">&quot;country&quot;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">brewer2mpl</span>
+<span class="n">brew_cmap</span> <span class="o">=</span> <span class="n">brewer2mpl</span><span class="o">.</span><span class="n">get_map</span><span class="p">(</span><span class="s">&quot;Dark2&quot;</span><span class="p">,</span> <span class="s">&quot;Qualitative&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="n">cmap</span> <span class="o">=</span> <span class="n">brew_cmap</span><span class="o">.</span><span class="n">get_mpl_colormap</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">bworld</span><span class="o">.</span><span class="n">country_info</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">ncountries</span>
+
+<span class="k">for</span> <span class="n">the_contry_dict</span> <span class="ow">in</span> <span class="n">bworld</span><span class="o">.</span><span class="n">country_info</span><span class="p">:</span>
+    <span class="n">code</span> <span class="o">=</span> <span class="n">the_contry_dict</span><span class="p">[</span><span class="s">&quot;ISO_2DIGIT&quot;</span><span class="p">]</span>
+    <span class="n">shp_num</span> <span class="o">=</span> <span class="n">the_contry_dict</span><span class="p">[</span><span class="s">&quot;SHAPENUM&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">colors</span><span class="p">[</span><span class="n">shp_num</span><span class="p">]</span> <span class="o">=</span> <span class="n">cmap</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">the_contry_dict</span><span class="p">[</span><span class="s">&quot;POP_CNTRY&quot;</span><span class="p">]))</span>
+
+<span class="n">linecollection</span><span class="o">.</span><span class="n">set_array</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">colors</span><span class="p">))</span>
+<span class="n">gca</span><span class="o">.</span><span class="n">add</span>
+    
+<span class="c">#bworld.colorbar(linecollection)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+{&apos;RINGNUM&apos;: 21, &apos;LANDLOCKED&apos;: &apos;N&apos;, &apos;SOVEREIGN&apos;: &apos;Russia&apos;, &apos;CURR_TYPE&apos;: &apos;Ruble&apos;, &apos;CURR_CODE&apos;: &apos;RUR&apos;, &apos;SQKM&apos;: 16911282.0, &apos;LONG_NAME&apos;: &apos;Russia&apos;, &apos;CNTRY_NAME&apos;: &apos;Russia&apos;, &apos;COLOR_MAP&apos;: &apos;1&apos;, &apos;GMI_CNTRY&apos;: &apos;RUS&apos;, &apos;SQMI&apos;: 6529445.0, &apos;ISO_2DIGIT&apos;: &apos;RU&apos;, &apos;ISO_3DIGIT&apos;: &apos;RUS&apos;, &apos;POP_CNTRY&apos;: 151827600, &apos;FIPS_CNTRY&apos;: &apos;RS&apos;, &apos;SHAPENUM&apos;: 1}
+
+</pre>
+</div>
+</div>
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
+
+
+<pre>
+&lt;matplotlib.figure.Figure at 0x10aef9c50&gt;
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[453]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="nb">len</span><span class="p">(</span><span class="n">bworld</span><span class="o">.</span><span class="n">country_info</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="basemap-plotting-wind-field">Basemap: plotting wind field</h1>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
@@ -15511,6 +15652,7 @@ In&nbsp;[]:
 <ul>
 <li><p>Plot fields <code>preacc</code> and <code>air</code> from <a href="http://scaweb.sca.uqam.ca/~huziy/example_data/wm201_Arctic_JJA_1990-2008_moyenneDesMoyennes.nc">here</a> using basemap. Add meridians and parallels as well as rivers to the map. Use subplots to put the plots side by side.</p></li>
 <li><p>Plot field <code>preacc</code> from <a href="http://scaweb.sca.uqam.ca/~huziy/example_data/pm1989010100_00000498p_0.44deg_africa_PR.nc">here</a>.</p></li>
+<li><p>In the model configuration files rotated lat/lon projection is defined using coordinates of the 2 points on a rotated equator so in order to calculate parameters needed for <code>basemap</code> I use this <a href="https://github.com/guziy/RPN/blob/master/src/domains/rotated_lat_lon.py">class</a>. The methods of interest are <code>get_north_pole_coords</code> and <code>get_true_pole_coords_in_rotated_system</code>.</p></li>
 </ul>
 </div></section>
     </section><section>
