@@ -2717,46 +2717,12 @@ I would like to eat apple or banana or cherry.
 </div>
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="strings">Strings</h1>
+<h1 id="strings-regular-expressions">Strings: regular expressions</h1>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[208]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight"><pre><span class="c">#replacing</span>
-<span class="s">&quot;mama&quot;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&quot;m&quot;</span><span class="p">,</span> <span class="s">&quot;p&quot;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-
-<div class="vbox output_wrapper">
-<div class="output vbox">
-
-
-<div class="hbox output_area"><div class="prompt output_prompt">
-    Out[208]:</div>
-<div class="box-flex1 output_subarea output_pyout">
-
-
-<pre>
-&apos;papa&apos;
-</pre>
-
-</div>
-</div>
-
-</div>
-</div>
-
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[209]:
+In&nbsp;[2]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="c">#regular expressions module</span>
@@ -2787,17 +2753,16 @@ In&nbsp;[209]:
 </div>
 </div>
 
-</div>
-    </div><div style=display:none>
+</div><div class="fragment">
     
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[210]:
+In&nbsp;[9]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="c">#regular expressions module</span>
-<span class="n">groups</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s">r&quot;-?\d+/\d+|-?\d+\.\d+|-?\d+&quot;</span><span class="p">,</span> <span class="s">&quot;Find 192.28940, -2/3 numbers 278: and -7 and do smth w 89&quot;</span><span class="p">)</span>
+<span class="n">groups</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s">r&quot;-?\d+/\d+|-?\d+\.\d+|-?\.?\d+|-?\d+\.?&quot;</span><span class="p">,</span> <span class="s">&quot;Find 192.28940, -2/3 numbers 278: and -7 and .005 w 89,fh.5 -354.&quot;</span><span class="p">)</span>
 <span class="k">print</span> <span class="n">groups</span>
 </pre></div>
 
@@ -2811,9 +2776,21 @@ In&nbsp;[210]:
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
-[&apos;192.28940&apos;, &apos;-2/3&apos;, &apos;278&apos;, &apos;-7&apos;, &apos;89&apos;]
+[&apos;192.28940&apos;, &apos;-2/3&apos;, &apos;278&apos;, &apos;-7&apos;, &apos;.005&apos;, &apos;89&apos;, &apos;.5&apos;, &apos;-354&apos;]
 
 </pre>
+</div>
+</div>
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[9]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+0.005
+</pre>
+
 </div>
 </div>
 
@@ -3223,8 +3200,8 @@ Sum over (-0.1 &gt; arr) or (arr &gt; 0.1):  0.910653974971
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="exercises-numpy">Exercises: Numpy</h1>
 <ul>
-<li><p>Generate a 10 x 3 array of random numbers (in range [0,1]). For each row, pick the number closest to 0.5 (<a href="http://scipy-lectures.github.io/intro/numpy/exercises.html#picture-manipulation-framing-lena">source</a>) <em>Hint:</em> use <code>np.argmin</code>.</p></li>
-<li><p>Checkout numpy for MATLAB users transition <a href="">table</a>.</p></li>
+<li><p>Generate a 10 x 3 array of random numbers (in range [0,1]). For each row, pick the number closest to 0.5 (<a href="http://scipy-lectures.github.io/intro/numpy/exercises.html#crude-integral-approximations">source</a>) <em>Hint:</em> use <code>np.argmin</code>.</p></li>
+<li><p>Checkout numpy for MATLAB users transition <a href="http://wiki.scipy.org/NumPy_for_Matlab_Users">table</a>.</p></li>
 </ul>
 </div><div style=display:none>
     
