@@ -1,0 +1,3 @@
+[submodule "CMOS-python-tutorial"]
+	path = CMOS-python-tutorial
+	url = git@github.com:guziy/CMOS-python-tutorial.git
