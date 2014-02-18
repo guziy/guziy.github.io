@@ -1783,6 +1783,35 @@ text-align: inherit;
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="boundary-conditions">Boundary conditions</h1>
+<p><strong>Image taken from NEMO documentation:</strong></p>
+<p><img src="images/domain_scheme.png"/></p>
+<p>Domain has atmosphere-ocean, ice-ocean and land-ocean interfaces, where the boundary conditions should be set.</p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="boundary-conditions">Boundary conditions</h1>
+<ul>
+<li><p><strong>Bottom:</strong> <span class="math">\[
+    w = -\vec{U_h}\cdot\nabla_h \left( H \right)
+    \]</span> In addition to this small scale exchanges are parameterized in <span class="math">\(\vec{D^{U}}\)</span>.</p></li>
+<li><p><strong>Atmosphere-ocean:</strong> <span class="math">\[
+    w = \partial_{t}\eta + \vec{U_h} \cdot \nabla \left( \eta \right) + P - E
+    \]</span></p>
+<p><span class="math">\(p(\eta - 0) = p(\eta + 0)\)</span> - pressure continuity across the boundary</p>
+<p>Atmosphere and ocean also exchange horizontal momentum (wind stress) and heat.</p></li>
+<li><p><strong>Sea ice - ocean:</strong> Exchange heat, salt, fresh water and momentum. <span class="math">\(T(x,y,\eta, t) = 0\)</span> - if ice present. Fresh water fluxes associated with freezing/melting are not negligible.</p></li>
+</ul>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="horizontal-pressure-gradient-term">Horizontal pressure gradient term</h1>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="references">References</h1>
 <ul>
 <li>Gurvan Madec, and the NEMO team, 2012: &quot;NEMO Ocean engine&quot;</li>
