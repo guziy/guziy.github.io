@@ -49,29 +49,23 @@ title: A hub for improving my communication skills!!
         <hr>
 
         <section id="main_content">
-		 <h3>Python tutorial modification for the CMOS2014 workshop</h3>
-<p>	
-I am currently working on my slides and the work in progress is available <a href="CMOS-python-tutorial/cmos2014-python-tutorial.slides.html">here</a>.
-</p>	
+          <!-- Show last 5 posts here -->
+          {% for post in site.posts limit: 5  %}
+          	<article>
+          
+                  <header>
+                      <h2><a href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a></h2>
+                      <span class="date"><i class="icon-clock"></i><time datetime="{{post.date|date:"%F"}}">{{post.date|date:"%b %d, %Y"}}</time></span><br/>
+                      <span class="category"><i class="icon-tag"></i> {{ post.categories | category_links }}</span><br/>
+                      <span class="author"><i class="icon-user"></i> {% if post.author %}{{post.author}}{% else %}{{site.author}}{% endif%}</span>
+                  </header>
+          
+          		<div class="entry">{{ post.excerpt }}</div>
+          
+          	</article>
+          {% endfor %}
 
-
-	 <h3>Python tutorial for CNRCWP students is planned on 18th of December</h3>
-<p>	
-I am currently working on my slides and the work in progress is available <a href="CNRCWP_student_workshop_2013-12-17/Python_CNRCWP_tutorial.slides.html">here</a>.
-If you want to know more about CNRCWP, please visit this <a href="http://cnrcwp.uqam.ca">page</a>.
-</p>	
-
-
-	<hr>
-	<h3>My post at earthpy.org about interpolation of geographical data</h3>
-	<p>While I was browsing earthpy tutorials I've encountered a post about interpolation using `basemap` module. And there I've commented about another way of doing it 
-(using `scipy.spatial.cKDTree`) and was invited to show an example. So that has resulted in the following <a href="http://earthpy.org/interpolation_between_grids_with_ckdtree.html">post</a>.</p>
-
-	<hr>
-	<h3>Streamflow related observations</h3>
-	<p>
-	<a href="http://www.cgd.ucar.edu/cas/catalog/surface/dai-runoff/index.html">link </a>
-	</p>
+        </section>
 
 
        <footer>
