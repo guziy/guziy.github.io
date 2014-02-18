@@ -21,7 +21,7 @@ category_dir: /
 baseurl: 
 
 # The URL of your actual domain. This will be used to make absolute links in the RSS feed.
-url: http://guziy.blogspot.io/
+url: guziy.blogspot.io
 
 #### Under the Hood Stuff #####
 
@@ -34,4 +34,4 @@ markdown: rdiscount
 permalink: pretty
 
 # Exclude metadata and development time dependencies (like Grunt plugins)
-exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, node_modules]
+#exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, node_modules]
