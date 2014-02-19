@@ -1,5 +1,6 @@
 ---
 title: My post at earthpy.org about interpolation of geographical data
+layout: post
 ---
 
 While I was browsing earthpy tutorials I've encountered a post about interpolation using `basemap` module. And there I've commented about another way of doing it 
