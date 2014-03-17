@@ -1,3 +1,6 @@
 [submodule "CMOS-python-tutorial"]
 	path = CMOS-python-tutorial
 	url = https://github.com/guziy/CMOS-python-tutorial.git
+[submodule "nemo1_presentation"]
+	path = nemo1_presentation
+	url = git@github.com:guziy/nemo1_presentation.git
