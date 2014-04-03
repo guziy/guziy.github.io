@@ -6,4 +6,4 @@
 	url = https://github.com/guziy/nemo1_presentation.git
 [submodule "lra_interactions_presentation"]
 	path = lra_interactions_presentation
-	url = git@github.com:guziy/lra_interactions_presentation.git
+	url = https://github.com/guziy/lra_interactions_presentation.git
