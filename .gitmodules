@@ -4,3 +4,6 @@
 [submodule "nemo1_presentation"]
 	path = nemo1_presentation
 	url = https://github.com/guziy/nemo1_presentation.git
+[submodule "lra_interactions_oresentation"]
+	path = lra_interactions_oresentation
+	url = https://github.com/guziy/lra_interactions_presentation.git
