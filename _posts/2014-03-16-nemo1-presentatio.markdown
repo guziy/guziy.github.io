@@ -1,6 +1,6 @@
 ---
 title: Presentation of some preliminary results from NEMO.
-categories: [presentations, modeling]
+categories: [presentation, modeling]
 layout: post
 ---
 

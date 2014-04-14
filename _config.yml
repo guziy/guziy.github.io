@@ -1,5 +1,5 @@
 # Name of your blog (this will show up at the top of your page and in the RSS feed)
-name: A hub for improving my communication skills
+name: a hub for improving my communication skills
 
 # Short description (goes below the title; it will also be used in the RSS feed)
 description: Public documents and presentations
@@ -35,3 +35,6 @@ permalink: pretty
 
 # Exclude metadata and development time dependencies (like Grunt plugins)
 exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, node_modules]
+
+
+paginate: 3
