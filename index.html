@@ -15,7 +15,8 @@ layout: default
 				{{post.date|date:"%b %d, %Y"}}
 			</time></span>
 		<br/>
-		<span class="category"><i class="icon-tag"></i> {{ post.categories | category_links }}</span>
+        <span class="category"><i class="icon-tag"></i> {{post.categories | join: ', ' }} </span>
+
 	</header>
 
 	<div class="entry">
