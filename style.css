@@ -133,3 +133,7 @@ article header h2 {
 section address {
     margin-left: 15px;
 }
+
+div.pagination{
+    text-align: center;
+}
